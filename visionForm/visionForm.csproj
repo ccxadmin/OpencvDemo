@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\OpenCvSharp4.runtime.win.4.5.3.20211228\build\net461\OpenCvSharp4.runtime.win.props" Condition="Exists('..\packages\OpenCvSharp4.runtime.win.4.5.3.20211228\build\net461\OpenCvSharp4.runtime.win.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A4F0AB3F-1ABF-4C80-828D-26DF1CC1628D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>visionForm</RootNamespace>
+    <AssemblyName>visionForm</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>default</LangVersion>
+    <DocumentationFile>bin\Debug\visionForm.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>default</LangVersion>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Basler.Pylon, Version=1.1.0.0, Culture=neutral, PublicKeyToken=e389355f398382ab, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\Basler.Pylon.dll</HintPath>
+    </Reference>
+    <Reference Include="FilesRAWLibrary">
+      <HintPath>dll\FilesRAWLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="MvCameraControl.Net">
+      <HintPath>dll\MvCameraControl.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenCvSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCvSharp4.4.5.3.20211228\lib\net461\OpenCvSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenCvSharp.Extensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCvSharp4.Extensions.4.5.3.20211228\lib\net461\OpenCvSharp.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="OSLogLib">
+      <HintPath>dll\OSLogLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.5.0.3\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIDesign, Version=2.2.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\UIDesign.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CalibrationFormat.cs" />
+    <Compile Include="Datagrid.cs" />
+    <Compile Include="frmAgreement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgreement.Designer.cs">
+      <DependentUpon>frmAgreement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgreement2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgreement2.Designer.cs">
+      <DependentUpon>frmAgreement2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCalibration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCalibration.Designer.cs">
+      <DependentUpon>frmCalibration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGlueRegionMaking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGlueRegionMaking.Designer.cs">
+      <DependentUpon>frmGlueRegionMaking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmrecipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmrecipe.Designer.cs">
+      <DependentUpon>frmrecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTemplateShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTemplateShow.Designer.cs">
+      <DependentUpon>frmTemplateShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="outPutData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UCPretreatmentParmas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCPretreatmentParmas.Designer.cs">
+      <DependentUpon>UCPretreatmentParmas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCPretreatmentParmas2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCPretreatmentParmas2.Designer.cs">
+      <DependentUpon>UCPretreatmentParmas2.cs</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmAgreement.resx">
+      <DependentUpon>frmAgreement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgreement2.resx">
+      <DependentUpon>frmAgreement2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCalibration.resx">
+      <DependentUpon>frmCalibration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGlueRegionMaking.resx">
+      <DependentUpon>frmGlueRegionMaking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmrecipe.resx">
+      <DependentUpon>frmrecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTemplateShow.resx">
+      <DependentUpon>frmTemplateShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCPretreatmentParmas.resx">
+      <DependentUpon>UCPretreatmentParmas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCPretreatmentParmas2.resx">
+      <DependentUpon>UCPretreatmentParmas2.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="images\上移.png" />
+    <None Include="images\下移.png" />
+    <None Include="images\删除.png" />
+    <None Include="images\运行.png" />
+    <None Include="images\向右箭头.png" />
+    <None Include="images\向左箭头.png" />
+    <None Include="images\参数保存.png" />
+    <None Include="images\重置.png" />
+    <None Include="images\加载.png" />
+    <None Include="images\擦拭.png" />
+    <None Include="images\清除.png" />
+    <Content Include="Properties\agreement.png" />
+    <Content Include="Properties\Delete.png" />
+    <Content Include="Properties\exchangeArror.png" />
+    <Content Include="Properties\exchangeDOWN.png" />
+    <Content Include="Properties\exchangeUP.png" />
+    <Content Include="Properties\NewAdd.png" />
+    <Content Include="Properties\SaveTool.png" />
+    <None Include="packages.config" />
+    <None Include="Properties\tem.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DeviceLib\DeviceLib.csproj">
+      <Project>{0596ee9d-f313-4e85-8177-69223168a1b3}</Project>
+      <Name>DeviceLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FuncToolLib\FuncToolLib.csproj">
+      <Project>{a054ca65-812c-48b4-ae67-0d9a64a6df6b}</Project>
+      <Name>FuncToolLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParamDataLib\ParamDataLib.csproj">
+      <Project>{1ea4aa88-0f9b-49a4-894f-9219b433f6ae}</Project>
+      <Name>ParamDataLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UCLib\UCLib.csproj">
+      <Project>{d112435f-e120-4209-b4f2-41609cba22dd}</Project>
+      <Name>UCLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VisionShowLib\VisionShowLib.csproj">
+      <Project>{7f89f40b-b0be-472e-8bc9-dfc79c37b573}</Project>
+      <Name>VisionShowLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\OpenCvSharp4.runtime.win.4.5.3.20211228\build\net461\OpenCvSharp4.runtime.win.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\OpenCvSharp4.runtime.win.4.5.3.20211228\build\net461\OpenCvSharp4.runtime.win.props'))" />
+  </Target>
+</Project>
